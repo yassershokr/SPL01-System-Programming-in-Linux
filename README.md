@@ -56,11 +56,10 @@ gcc -o femto_shell femto_shell.c
 - **Dynamic Argument Parsing:** No fixed limit on the number of arguments
 - **Memory Management:** No memory leaks
 - **Error Handling:** Validates system calls and prints descriptive error messages
-
----
-
+- 
 ## Compilation Instructions
 Use the following command to compile the shell:
+
 gcc -Wall -Wextra -o pico_shell pico_shell.c
 
 ## Pico Shell Extention
