@@ -1,5 +1,5 @@
 #    SPL01-System-Programming-in-Linux
-## Simple Unix Utilities, Femto Shell and Pico Shell
+## Simple Unix Utilities, Femto Shell and Pico Shell & its extention
 
 This repository contains implementations of simple Unix utilities (`pwd`, `echo`, `cp`, `mv`), a basic shell (`Femto Shell`) and ('Pico Shell') in C. These programs are designed for educational purposes to demonstrate basic system programming and shell functionalities.
 
@@ -61,6 +61,36 @@ gcc -o femto_shell femto_shell.c
 
 ## Compilation Instructions
 Use the following command to compile the shell:
-```bash
 gcc -Wall -Wextra -o pico_shell pico_shell.c
+
+## Pico Shell Extention
+
+## Description
+**Pico Shell** is a simple UNIX-like shell implemented in C. It supports basic command execution, local and environment variables, variable substitution, and exporting variables to the environment.
+
+This project demonstrates important operating system concepts like:
+- Process creation and control
+- Environment manipulation
+- String tokenization
+- Memory management in C
+
+## Features
+ Built-in commands:
+- `pwd`
+- `cd`
+- `echo`
+- `export`
+- `exit`
+
+ Local variable assignments in the format `var=value`
+ Variable substitution using `$var`
+ Export local variables to environment variables with the `export` command
+ External command execution with inherited environment variables
+ Error handling and dynamic memory allocation
+
+## Compilation
+To compile the Pico Shell:
+
+gcc -o pico_shell pico_shell.c
+
 
