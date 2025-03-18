@@ -62,7 +62,7 @@ Use the following command to compile the shell:
 
 gcc -Wall -Wextra -o pico_shell pico_shell.c
 
-# Pico Shell Extention
+# Pico Shell Extention(Nano Shell)
 
 ## Description
 **Pico Shell** is a simple UNIX-like shell implemented in C. It supports basic command execution, local and environment variables, variable substitution, and exporting variables to the environment.
