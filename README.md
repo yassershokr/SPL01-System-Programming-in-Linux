@@ -1,7 +1,7 @@
 #    SPL01-System-Programming-in-Linux
-## Simple Unix Utilities and Femto Shell
+## Simple Unix Utilities, Femto Shell and Pico Shell
 
-This repository contains implementations of simple Unix utilities (`pwd`, `echo`, `cp`, `mv`) and a basic shell (`Femto Shell`) in C. These programs are designed for educational purposes to demonstrate basic system programming and shell functionalities.
+This repository contains implementations of simple Unix utilities (`pwd`, `echo`, `cp`, `mv`), a basic shell (`Femto Shell`) and ('Pico Shell') in C. These programs are designed for educational purposes to demonstrate basic system programming and shell functionalities.
 
 ## Utilities
 
@@ -44,3 +44,36 @@ To compile the shell, use the following command:
 
 ```bash
 gcc -o femto_shell femto_shell.c
+
+## Pico Shell
+A simple shell implementation in C supporting built-in commands and external program execution.
+
+## Features
+ Built-in Commands:
+- `echo`
+- `pwd`
+- `cd`
+- `exit`
+
+ External command execution using `fork()` and `execvp()`
+ Dynamic memory allocation for argument parsing
+ Error handling for system calls
+---
+## Compilation
+```bash
+gcc -Wall -Wextra -o pico_shell pico_shell.c
+###Example Session:
+pico-shell> pwd
+/home/user/pico_shell
+
+pico-shell> echo Hello World!
+Hello World!
+
+pico-shell> cd ..
+pico-shell> pwd
+/home/user
+
+pico-shell> ls
+pico_shell  pico_shell.c  README.md
+
+pico-shell> exit
