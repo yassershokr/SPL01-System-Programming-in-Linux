@@ -87,6 +87,27 @@ This project demonstrates important operating system concepts like:
  Export local variables to environment variables with the `export` command
  External command execution with inherited environment variables
  Error handling and dynamic memory allocation
+ 
+## Usage Example
+./pico_shell
+
+pico-shell> x = 5
+Invalid command
+
+pico-shell> x=5
+pico-shell> echo $x
+5
+
+pico-shell> folder=home
+pico-shell> ls /$folder
+
+pico-shell> echo $non_existing_var
+
+pico-shell> export x
+pico-shell> printenv | grep x
+x=5
+
+pico-shell> exit
 
 ## Compilation
 To compile the Pico Shell:
