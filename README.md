@@ -29,7 +29,7 @@ This repository contains implementations of simple Unix utilities (`pwd`, `echo`
 - **Usage**: `./mv source_file destination_file`
 - **Example**: Moves `file.txt` to `/tmp/file_renamed.txt`.
 
-## Femto Shell
+# Femto Shell
 
 ### Description
 Femto Shell is a simple shell that supports basic commands like `echo` and `exit`. It is designed to demonstrate basic shell functionalities.
@@ -44,7 +44,7 @@ To compile the shell, use the following command:
 
 gcc -o femto_shell femto_shell.c
 
-## Pico Shell - A Simple UNIX Shell in C
+# Pico Shell - A Simple UNIX Shell in C
 
 ## Features
 - **Built-in Commands:**
@@ -62,7 +62,7 @@ Use the following command to compile the shell:
 
 gcc -Wall -Wextra -o pico_shell pico_shell.c
 
-## Pico Shell Extention
+# Pico Shell Extention
 
 ## Description
 **Pico Shell** is a simple UNIX-like shell implemented in C. It supports basic command execution, local and environment variables, variable substitution, and exporting variables to the environment.
@@ -107,6 +107,56 @@ pico-shell> printenv | grep x
 x=5
 
 pico-shell> exit
+
+# Micro Shell 
+
+## Description
+**Micro Shell** is a simple UNIX-like shell written in C that supports:
+- Executing built-in and external commands
+- Local variable assignments (`var=value`)
+- Environment variable export (`export var`)
+- Variable substitution (`$var`)
+- I/O redirection:
+  - `<` for input redirection
+  - `>` for output redirection
+  - `2>` for error redirection
+
+This shell demonstrates process creation, file descriptor manipulation, and memory management.
+
+## Features
+ **Built-in Commands**
+- `pwd`
+- `cd`
+- `echo`
+- `export`
+- `exit`
+
+ **Local Variable Support**
+- Assign variables using `var=value` (no spaces allowed)
+
+ **Variable Substitution**
+- Use `$var` to substitute a variable in commands
+
+ **Exporting Variables**
+- `export var` adds a variable to the environment
+
+ **I/O Redirection**
+- Redirect input: `command < file.txt`
+- Redirect output: `command > file.txt`
+- Redirect errors: `command 2> error.txt`
+- Combine multiple redirections: `command < input.txt > output.txt 2> error.txt`
+
+ **Error Handling**
+- Invalid redirection or file open failure cancels command execution
+
+ **Dynamic Memory Management**
+- No memory leaks
+
+
+## Compilation
+To compile Micro Shell, run:
+```bash
+gcc -o micro_shell micro_shell.c
 
 ## Compilation
 To compile the Pico Shell:
