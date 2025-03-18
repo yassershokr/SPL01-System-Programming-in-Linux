@@ -42,38 +42,25 @@ Femto Shell is a simple shell that supports basic commands like `echo` and `exit
 ### Compilation
 To compile the shell, use the following command:
 
-```bash
 gcc -o femto_shell femto_shell.c
 
-## Pico Shell
-A simple shell implementation in C supporting built-in commands and external program execution.
+## Pico Shell - A Simple UNIX Shell in C
 
 ## Features
- Built-in Commands:
-- `echo`
-- `pwd`
-- `cd`
-- `exit`
+- **Built-in Commands:**
+  - `echo`: Prints text to the terminal
+  - `pwd`: Prints the current working directory
+  - `cd`: Changes the working directory
+  - `exit`: Exits the shell
+- **External Command Execution:** Supports commands like `ls`, `cat`, `date`, etc.
+- **Dynamic Argument Parsing:** No fixed limit on the number of arguments
+- **Memory Management:** No memory leaks
+- **Error Handling:** Validates system calls and prints descriptive error messages
 
- External command execution using `fork()` and `execvp()`
- Dynamic memory allocation for argument parsing
- Error handling for system calls
 ---
-## Compilation
+
+## Compilation Instructions
+Use the following command to compile the shell:
 ```bash
 gcc -Wall -Wextra -o pico_shell pico_shell.c
-###Example Session:
-pico-shell> pwd
-/home/user/pico_shell
 
-pico-shell> echo Hello World!
-Hello World!
-
-pico-shell> cd ..
-pico-shell> pwd
-/home/user
-
-pico-shell> ls
-pico_shell  pico_shell.c  README.md
-
-pico-shell> exit
